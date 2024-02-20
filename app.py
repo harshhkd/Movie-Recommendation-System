@@ -21,13 +21,11 @@ similarity = pickle.load(open('similarity.pkl','rb'))
 
 st.title('Movie Recommender System')
 
-# use for text box
 selected_movie_name = st.selectbox(
     'Select One Movie',
     movies['title'].values
 )
 
-#use for button
 if st.button('Recommend'):
     recommendations = recommend(selected_movie_name)
     for i in recommendations:
